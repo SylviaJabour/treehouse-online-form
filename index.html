@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <header class="main-header">
+      <h1 class="main-header__title">The Code Review</h1>
+    </header>
+
+    <!-- HEADER END -->
+
+    <!-- MAIN -->
+
+    <main class="container">
+      <form class="main-section">
+        <header>
+          <h2 class="main-section__title">Signup for our newsletter</h2>
+          <p class="main-section__text">Get the latest news on how your code is doing right in your inbox</p>
+        </header>
+
+        <hr class="main-section__line" />
+
+        <fieldset class="form-fieldset">
+          <legend class="form-fieldset--legend">Contact Information</legend>
+
+          <div class="form__input-container">
+            <label class="form__input--label" for="name">Full Name</label>
+            <input required class="form__input" type="text" id="name" name="user_name" placeholder="Required" />
+          </div>
+
+          <div class="form__input-container">
+            <label class="form__input--label" for="mail">Email Address</label>
+            <input required class="form__input" type="email" id="mail" name="user_email" placeholder="Required" />
+          </div>
+
+          <div class="form__input-container">
+            <label class="form__input--label" for="phone">Phone Number</label>
+            <input class="form__input" type="tel" id="phone" name="user_phone" />
+          </div>
+
+          <div class="form__input-container">
+            <label class="form__input--label" for="address">Street Address</label>
+            <input class="form__input" type="text" id="address" name="user_address" />
+          </div>
+
+          <div class="form__input-container">
+            <label class="form__input--label" for="city">City</label>
+            <input class="form__input" type="text" id="city" name="user_city" />
+          </div>
+
+          <div class="form__input-container">
+            <label class="form__input--label" for="state_select">State</label>
+            <select class="form__input form__input--dropdown" id="state_select" name="user_state">
+              <option value="" disabled selected>Choose State</option>
+              <option value="Alberta">Alberta</option>
+              <option value="British Columbia">British Columbia</option>
+              <option value="Manitoba">Manitoba</option>
+              <option value="New Brunswick">New Brunswick</option>
+              <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+              <option value="Nova Scotia">Nova Scotia</option>
+              <option value="Ontario">Ontario</option>
+              <option value="Prince Edward Island">Prince Edward Island</option>
+              <option value="Saskatchewan">Saskatchewan</option>
+            </select>
+          </div>
+
+          <div class="form__input-container">
+            <label class="form__input--label" for="zip">Zip Code</label>
+            <input
+              class="form__input form__zipcode"
+              type="text"
+              id="zip"
+              pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+              name="user_zip"
+            />
+          </div>
+          <hr class="form__line" />
+        </fieldset>
+
+        <fieldset class="form-fieldset form-fieldset--secondary">
+          <legend class="form-fieldset--legend form-fieldset--legend__secondary">Newsletter</legend>
+
+          <div class="form__checkable-container">
+            <label class="form__checkable--subject">Select the newsletters you would like to receive</label>
+
+            <div class="form__checkable">
+              <input type="checkbox" id="htmlnews" value="interest_htmlnews" name="user_interest" />
+              <label class="form__checkable--label" for="htmlnews">HTML News</label>
+            </div>
+
+            <div class="form__checkable">
+              <input type="checkbox" id="cssnews" value="interest_cssnews" name="user_interest" />
+              <label class="form__checkable--label" for="cssnews">CSS News</label>
+            </div>
+
+            <div class="form__checkable">
+              <input type="checkbox" id="javascriptnews" value="interest_javascriptnews" name="user_interest" />
+              <label class="form__checkable--label" for="javascriptnews">Javascript News</label>
+            </div>
+          </div>
+
+          <div class="form__checkable-container">
+            <label class="form__checkable--subject">Newsletter format</label>
+
+            <div class="form__checkable">
+              <input type="radio" id="html" value="newsletter_format" name="user-format" />
+              <label class="form__checkable--label" for="html">HTML</label>
+            </div>
+
+            <div class="form__checkable">
+              <input type="radio" id="plain_text" value="newsletter_format" name="user-format" />
+              <label class="form__checkable--label" for="plain_text">Plain Text</label>
+            </div>
+          </div>
+
+          <label class="form__checkable--subject form__checkable--secondary" for="bio"
+            >Other topics you'd to hear about</label
+          >
+          <textarea
+            class="form__input form__input--textarea"
+            id="bio"
+            name="user_bio"
+            placeholder="Enter your text here"
+          ></textarea>
+        </fieldset>
+
+        <div class="main-form__button">
+          <button class="main-form__button__text" type="submit">Sign Up</button>
+        </div>
+        <footer>
+          <small class="form__copyright">Copyright The Code Review</small>
+        </footer>
+      </form>
+    </main>
+    <!-- MAIN END-->
+  </body>
+</html>
